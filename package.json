@@ -1,0 +1,25 @@
+{
+  "name": "codi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+ 
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^6.0.2"
+  },
+
+  
+  "scripts": {
+
+    "test":"jest",
+
+    "back": "cd back && npm start",
+    "front": "cd front && npm start",
+    "start": "concurrently --kill-others-on-fail --names \"back,front\" \"npm run back\" \"npm run front\""
+  }
+  
+}
+
